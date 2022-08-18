@@ -6,7 +6,7 @@ const root = resolve(__dirname, "src");
 const outDir = resolve(__dirname, "dist");
 
 export default defineConfig({
-  base: "/eAgenda-vite",
+  base: "/eAgenda-vite/",
   plugins: [ghPages()],
   root: root,
   build: {
