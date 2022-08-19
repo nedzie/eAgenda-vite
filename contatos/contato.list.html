@@ -17,9 +17,8 @@
   
 
   <title>eAgenda — Contatos</title>
-  <script type="module" crossorigin src="/eAgenda-vite/assets/contatoCreate.b82ba3c5.js"></script>
+  <script type="module" crossorigin src="/eAgenda-vite/assets/contatoList.af50b8ae.js"></script>
   <link rel="modulepreload" crossorigin href="/eAgenda-vite/assets/modulepreload-polyfill.c7c6310f.js">
-  <link rel="modulepreload" crossorigin href="/eAgenda-vite/assets/entidade.model.0b0c5e30.js">
   <link rel="modulepreload" crossorigin href="/eAgenda-vite/assets/contato.repository.local-storage.2bfd6cc0.js">
   <link rel="stylesheet" href="/eAgenda-vite/assets/style.07449257.css">
 </head>
@@ -29,7 +28,7 @@
     <div class="container">
       <a class="navbar-brand" href="../index.html">
         eAgenda
-        <span class="badge bg-secondary text-bg-light">Web</span>
+        <span class="badge bg-warning text-bg-light">Web</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,48 +64,36 @@
     </div>
   </nav>
 
-  <main class="container d-flex justify-content-center mt-2">
-    <div class="row w-75 text-center text-md-start p-0 p-md-5">
+
+  <main class="container mt-2">
+    <div class="text-center text-md-start p-0 p-md-5">
       <section id="cabecalho">
         <header>
-          <h1 class="title text-light fw-bold">Cadastrar Contatos</h1>
+          <h1 class="title text-light fw-bold">Contatos</h1>
           <p class="fs-5 mt-3 text-warning fw-semibold">Cadastre seus contatos para aumentar seu networking.</p>
+          <a class="btn btn-lg btn-primary px-5" href="./contato.create.html">Novo Contato</a>
         </header>
-        <div class="card text-bg-dark border-secondary p-0 p-md-2 mt-4 d-flex">
-          <div class="card-body p-5">
-            <form class="form text-bg-dark mt-3" id="formulario">
-              <div class="form-group">
-                <label class="form-label fs-5" for="txtNome">Nome</label>
-                <input id="txtNome" class="form-control" type="text" placeholder="Nome do contato">
-              </div>
+      </section>
 
-              <div class="form-group">
-                <label class="form-label fs-5" for="txtEmail">Email</label>
-                <input id="txtEmail" class="form-control" type="email" placeholder="nome@provedor.com">
-              </div>
-
-              <div class="form-group">
-                <label class="form-label fs-5" for="txtTelefone">Telefone</label>
-                <input id="txtTelefone" class="form-control" type="text" maxlength="11" placeholder="00000000000">
-              </div>
-
-              <div class="form-group">
-                <label class="form-label fs-5" for="txtEmpresa">Empresa</label>
-                <input id="txtEmpresa" class="form-control" type="text" placeholder="Falindo Ltda.">
-              </div>
-
-              <div class="form-group">
-                <label class="form-label fs-5" for="txtCargo">Cargo</label>
-                <input id="txtCargo" class="form-control" type="text" placeholder="Desempregado">
-              </div>
-            </form>
+      <section id="table">
+        <div class="card text-bg-dark border-secondary mt-4 p-3">
+          <div class="card-body">
+            <table id="tabela" class="table table-dark text-center">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Nome</th>
+                  <th>Email</th>
+                  <th>Telefone</th>
+                  <th>Empresa</th>
+                  <th>Contato</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+              </tbody>
+            </table>
           </div>
         </div>
-
-        <div class="card-footer px-3 text-center text-md-end">
-          <button id="btnSalvar" type="button" class="btn btn-primary mt-4 px-5">Salvar</button>
-        </div>
-
       </section>
     </div>
   </main>
