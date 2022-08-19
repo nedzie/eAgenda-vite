@@ -17,7 +17,6 @@ export default defineConfig({
         index: resolve(root, "index.html"),
         tarefaList: resolve(root, "tarefas/tarefa.list.html"),
         tarefaCreate: resolve(root, "tarefas/tarefa.create.html"),
-        /* Os meus */
         contatoList: resolve(root, "contatos/contato.create.html"),
         contatoCreate: resolve(root, "contatos/contato.create.html"),
         itemList: resolve(root, "tarefas/item.list.html"),
@@ -25,5 +24,5 @@ export default defineConfig({
       }
     }
   },
-  publicDir: "../public"
+  publicDir: "../public/"
 });
