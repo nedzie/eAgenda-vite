@@ -35,6 +35,9 @@ class TarefaPaginaCadastro implements IPaginaHTML, IPaginaFormulario<Tarefa>  {
   gravarRegistros(): void {
     const tarefa = this.obterDadosFormulario();
 
+    if(!this.validarInputs(tarefa))
+      return;
+
     if(!this.idSelecionado)
       this.repositorioTarefas.inserir(tarefa);
     else
@@ -76,6 +79,15 @@ class TarefaPaginaCadastro implements IPaginaHTML, IPaginaFormulario<Tarefa>  {
   private obterPrioridadeSelecionada(): Prioridade {
     const rdbPrioridade = document.querySelector('input[type="radio"]:checked') as HTMLInputElement;
     return rdbPrioridade.value as Prioridade;
+  }
+
+  private validarInputs(tarefa: Tarefa): boolean {
+    if(tarefa.descricao.length <= 3) {
+      alert("Descrição fora do padrão!");
+      return false;
+    }
+
+    return true;
   }
 }
 
